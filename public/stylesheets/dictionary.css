@@ -1,0 +1,53 @@
+body{
+    background: url(https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aee41664ed00498d58f651ebceb860b2&auto=format&fit=crop&w=750&q=80) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Kanit', sans-serif;
+
+}
+.container{
+    width: 600px;
+    /*background-color: #fff;*/
+    height: 100%;
+    margin-top:28px;
+}
+h1{
+    text-align: center;
+}
+
+#submitbutton{
+    width: 50%;
+    margin: 3px auto 5px auto;
+}
+.form-group{
+    
+    margin-top:15px;
+}
+.jumbotron{
+    width: 750px;
+    height: 175px;
+    margin:30px auto;
+    background-color: transparent !important;
+    color: white;
+	font-weight: 400;
+	font-size: 4em;
+	text-shadow:0px 4px 3px darkcyan,
+             0px 8px 13px rgba(0,0,0,0.2),
+             0px 18px 23px rgba(0,0,0,0.2); 
+}
+.output{
+    
+    margin-top: 10px;
+}
+#Title{
+    
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
+#tag{
+    color: white;
+    text-shadow: 0px 4px 3px royalblue,
+             0px 8px 13px grey,
+             0px 18px 23px white;
+    
+}

@@ -1,0 +1,57 @@
+<% include ./partials/header %>
+ <div class="jumbotron">
+    <h1 class="display-3">My Dictionary</h1>
+    <blockquote class="blockquote">
+  <p class="mb-0 text-center" id="tag">Enhance your vocabulary.</p>
+</blockquote>
+    <hr class="my-4">
+</div>
+
+<div class="container">
+   <div class="row">
+    <div class="col-5">
+      <form action"/" method="GET">
+        <div class="form-group float-left">
+            <!--<label for="searchinput" class="text-uppercase text-monospace font-weight-normal " ></label>-->
+            <input type="text" name="search"  placeholder="<%= word %>" class="form-control" id="searchinput" >
+        </div>
+    
+        <input type="submit" class="btn btn-lg btn-primary" id="submitbutton" value="Search">    
+    
+    
+</form>
+    </div>
+    <div class="col-7">
+        <div class="alert alert-primary" role="alert">
+      <div class="output ">
+            <li id="Title"><h5 style="display:inline "><%= data["title"]["word"] %></h5></li>
+            <br>
+            <% data["def"].forEach(function(defin){ %>
+         <p><%= count %> :  <%= defin["definitions"] %></p>
+         <% defin["examples"].forEach(function(example){ %>
+             Example :  <%= example["text"] %> 
+        <% }); %>
+        <% count += 1; %>
+         <% }); %>
+        <li>Synonyms:</li>
+            <%  data1["synonyms"].forEach(function(synonym){ %>
+            <%= synonym["text"] %>,
+            <% }); %>
+            
+            <br />
+            <br>
+            
+        <% if(data1["antonyms"]){  %>
+        <li>Antonyms:</li>
+        <%  data1["antonyms"].forEach(function(antonym){ %>
+        <%= antonym["text"] %>,
+        <% }); }%>
+        </div>
+    </div>
+    </div>
+  </div>
+    
+        
+</div>
+
+ <% include ./partials/footer %>
